@@ -1,0 +1,182 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card-container {
+  position: relative;
+  background-color: rgb(28, 0, 130);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-film {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.card-child-0, 
+.card-child-1, 
+.card-child-2, 
+.card-child-3, 
+.card-child-4  {
+  background-color: rgb(28, 0, 130);
+  width: 150px;
+  height: 50px;
+}
+
+.card-child-0:hover, 
+.card-child-1:hover, 
+.card-child-2:hover, 
+.card-child-3:hover, 
+.card-child-4:hover  {
+  font-size: 1.5em;
+}
+
+.card-child-0::before, 
+.card-child-1::before, 
+.card-child-2::before, 
+.card-child-3::before, 
+.card-child-4::before {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  content: "";
+  transition: 0.3s;
+}
+
+.card-child-0:hover::before, 
+.card-child-1:hover::before, 
+.card-child-2:hover::before, 
+.card-child-3:hover::before, 
+.card-child-4:hover::before {
+  width: 75px;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+
+.card-container:nth-child(n+0) > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-label {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.menu-position {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.menu-container {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  background-color: rgb(28, 0, 130);;
+  transition: 0.5s;
+}
+
+.menu::before {
+  position: absolute;
+  top: -10px;
+  content: "";
+  width: 25px;
+  height: 5px;
+  background-color: rgb(28, 0, 130);;
+  transition: 0.5s;
+
+}
+
+.menu::after {
+  position: absolute;
+  top: 10px;
+  content: "";
+  width: 25px;
+  height: 5px;
+  background-color: rgb(28, 0, 130);;
+  transition: 0.5s;
+
+}
+
+.menu-close {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.menu-close::after {
+  top: 0px;
+  content: "";
+  width: 25px;
+  height: 5px;
+  background-color: rgb(28, 0, 130);;
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.menu-close::before {
+  top: 0px;
+  content: "";
+  width: 25px;
+  height: 5px;
+  background-color: rgb(28, 0, 130);;
+  transition: 0.5s;
+}
+
+.aside {
+  position: absolute;
+  top: 75px;
+  left: 25px;
+  width: 150px;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.aside-transition-open {
+  height: 200px;
+  transition: 0.3s;
+}
+
+.aside-show {
+  height: 200px;
+  overflow: visible;
+  transition: 0.3s;
+}
