@@ -29,7 +29,6 @@ function addFunctionButton(item, itemChild) {
     itemChild.style.transform = `translateX(0px) translateY(0px)`;
     itemChild.style.transition = `0.5s`;
   
-  
   });
 }
 
